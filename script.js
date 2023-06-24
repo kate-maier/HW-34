@@ -10,13 +10,13 @@
 // що товар куплений і повернення у вихідний стан програми ( коли відображається лише список категорій).
 
 
-let mainCatalog = document.querySelectorAll('.catalogItem');
-let products = document.querySelectorAll('.products');
+const mainCatalog = document.querySelectorAll('.catalogItem');
+const products = document.querySelectorAll('.products');
 
-let productsArray = document.querySelectorAll('.productCard');
-let infoBlocks = document.querySelectorAll('.productInfo');
+const productsArray = document.querySelectorAll('.productCard');
+const infoBlocks = document.querySelectorAll('.productInfo');
 
-let buyBtn = document.getElementById('buyBtn');
+const buyBtn = document.getElementById('buyBtn');
 
 mainCatalog.forEach((catalogItem) => {
     catalogItem.addEventListener('click', (event) => {
@@ -62,8 +62,6 @@ productsArray.forEach((product) => {
     )
 })
 
-
-
 buyBtn.addEventListener('click', () => {
     let message = document.createElement('p');
     message.classList.add('message');
@@ -83,7 +81,6 @@ buyBtn.addEventListener('click', () => {
         products
             .forEach((catalogCategory) => {
                 catalogCategory.style.display = 'none';
-
             })
 
         message.style.display = 'none';
